@@ -3,11 +3,24 @@ import { useParams } from 'react-router-dom'
 
 export const Persona = () => {
 
-const {nombre, apellido} = useParams();
+let {nombre, apellido} = useParams();
+
+// // Valores por defecto en parámetros opcionales
+// if (!nombre) {
+//     nombre="Invitado";
+// }
+
+// if (!apellido) {
+//     apellido = "";
+// }
 
   return (
     <div>
-        <h1>Página de PERSONA: {nombre} {apellido}</h1>
+
+{/* Condicionales ternarios */}
+{!nombre && <h1>No hay ninguna persona que mostrar</h1>}
+{nombre && <h1>Página de persona: {nombre} {apellido}</h1>}
+
         <p>Esta página es de Persona</p>
     </div>
   )
