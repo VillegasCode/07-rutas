@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route, Link, BrowserRouter, NavLink } from 'react-router-dom'
+import { Routes, Route, Link, BrowserRouter, NavLink, Navigate } from 'react-router-dom'
 import { Inicio } from '../components/Inicio'
 import { Articulos } from '../components/Articulos'
 import { Contacto } from '../components/Contacto'
@@ -44,6 +44,7 @@ export const RouterPrincipal = () => {
             <Route path='/persona' element={<Persona />} />
             <Route path='/persona/:nombre' element={<Persona />} />
             <Route path='/persona/:nombre/:apellido' element={<Persona />} />
+            <Route path='/redirigir' element={<Navigate to="/persona/Andrew/Villegas" />} />
             <Route path='*' element={<Error />} />
             
             {/* En vez de usar una página de error también podrías colocar directamente el código HTML aquí <Route path='*' element={(
