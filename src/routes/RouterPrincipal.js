@@ -4,6 +4,7 @@ import { Inicio } from '../components/Inicio'
 import { Articulos } from '../components/Articulos'
 import { Contacto } from '../components/Contacto'
 import { Error } from '../components/Error'
+import { Persona } from '../components/Persona'
 
 export const RouterPrincipal = () => {
   return (
@@ -40,6 +41,7 @@ export const RouterPrincipal = () => {
             <Route path='/inicio' element={<Inicio />} />
             <Route path='/articulos' element={<Articulos />} />
             <Route path='/contacto' element={<Contacto />} />
+            <Route path='/persona' element={<Persona />} />
             <Route path='*' element={<Error />} />
             
             {/* En vez de usar una página de error también podrías colocar directamente el código HTML aquí <Route path='*' element={(
